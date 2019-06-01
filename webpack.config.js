@@ -17,6 +17,10 @@ module.exports = {
       // new UglifyJsPlugin({}) // для сжатия JS
     ]
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'), // Указываем публичный путь до нашего финального проекта
+    port: 4200
+  },
   plugins:[ 
     new HTMLPLugin({ // Плагин, позволяет компилировать файлы HTML с автоматическим добавлением ссылок на js файлы или css
       filename: 'index.html', // Название файла, которое мы получим на выходе в папку dist
