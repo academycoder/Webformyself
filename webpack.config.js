@@ -23,8 +23,8 @@ module.exports = {
   },
   plugins:[ 
     new HTMLPLugin({ // Плагин, позволяет компилировать файлы HTML с автоматическим добавлением ссылок на js файлы или css
-      filename: 'index.html', // Название файла, которое мы получим на выходе в папку dist
-      template: './src/index.html' //Указываем шаблон, который берем за основу
+      // filename: 'index.pug', // Название файла, которое мы получим на выходе в папку dist
+      template: './src/pug/index.pug' //Указываем шаблон, который берем за основу
     }),
     new MiniCssExtractPlugin({ // Берет мой CSS файл и компилирует его в отдельный файл style css
       filename: 'style.css'
@@ -35,6 +35,13 @@ module.exports = {
       {
         test: /\.css$/, // Указываем расширение файла, на который будет влиять loader
         use: [MiniCssExtractPlugin.loader,'css-loader'] // Обязательно указываем первым style вначале, т.к вебпак считывает справа-налево, т.е. сначала он займется css, а потом style
+      },
+      {
+        test: /\.pug$/, // Указываем расширение файла, на который будет влиять loader
+        loader: 'pug-loader',
+        options: {
+          pretty: true
+        }
       },
       {
         test: /\.less$/, // Указываем расширение файла, на который будет влиять loader

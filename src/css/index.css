@@ -1,8 +1,2 @@
 @import 'header.css'; 
 /* Импортировал другие CSS файлы из этой же папки */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
