@@ -40,6 +40,10 @@ module.exports = {
         test: /\.less$/, // Указываем расширение файла, на который будет влиять loader
         use: [MiniCssExtractPlugin.loader,'css-loader', 'less-loader'] // Обязательно указываем первым style вначале, т.к вебпак считывает справа-налево, т.е. сначала он займется css, а потом style
       },
+      {
+        test: /\.scss$/, // Указываем расширение файла, на который будет влиять loader
+        use: [MiniCssExtractPlugin.loader,'css-loader', 'sass-loader'] // Обязательно указываем первым style вначале, т.к вебпак считывает справа-налево, т.е. сначала он займется css, а потом style
+      },
       { 
         test: /\.js$/,       //  Это настройка для babel. Она звучит так: берем файлы с раширение JS, не трогаем те, что в node modules и используем для работы babel-loader
         exclude: /node_modules/, 
