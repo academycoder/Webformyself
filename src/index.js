@@ -2,6 +2,7 @@ import AppService from './modules/app.service'
 import {config} from './modules/config'
 import './modules/header.component'
 import './css/index.css' // Импортирую css файлы
+import './less/index.less' // Импортирую less файлы
 
 console.log('Config key: ', config.key)
 
