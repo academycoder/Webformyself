@@ -14,7 +14,7 @@ module.exports = {
   optimization: {
     minimizer: [
       new OptimizeCssAssetsPlugin({}), // Для сжатия CSS стилей
-      // new UglifyJsPlugin({}) // для сжатия JS
+      new UglifyJsPlugin() // для сжатия JS
     ]
   },
   devServer: {
@@ -35,6 +35,11 @@ module.exports = {
       {
         test: /\.css$/, // Указываем расширение файла, на который будет влиять loader
         use: [MiniCssExtractPlugin.loader,'css-loader'] // Обязательно указываем первым style вначале, т.к вебпак считывает справа-налево, т.е. сначала он займется css, а потом style
+      },
+      { 
+        test: /\.js$/,       //  Это настройка для babel. Она звучит так: берем файлы с раширение JS, не трогаем те, что в node modules и используем для работы babel-loader
+        exclude: /node_modules/, 
+        loader: "babel-loader" 
       }
     ]
   }
