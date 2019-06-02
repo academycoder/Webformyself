@@ -11,11 +11,11 @@
 // Modules
 @import "modules/wrapper.scss";
 
-body {
-  background-image: url("/img/Background/image3.png");
-}
+//body {
+//  background-image: url("/img/Background/image3.png");
+//}
 
 // так тоже работает
-//body {
-//  background-image: url("../img/Background/image3.png");
-//}
+body {
+  background-image: url("../img/Background/image3.png");
+}
