@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+block variables
+
+doctype html
 html(lang="ru")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Document
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title= pageTitle
   body
-    h1 Hello, I'm pug
-    .image
-      
+    include ./modules/header
+    include ./modules/body
+    include ./modules/navigation
+    include ./modules/footer

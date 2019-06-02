@@ -1,13 +1,92 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title></title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
-    <h1>Hello, I'm pug</h1>
-    <div class="image"></div>
+<header>
+  <section class="header">
+    <div class="header__logo"><a href="#"><img src="/img/icons/Logo.png" alt="TOXIN"></a></div>
+    <div class="header__nav">
+      <ul>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Вакансии</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Соглашения</a></li>
+      </ul>
+    </div>
+    <div class="header__buttons"><a class="header__buttons entry" href="#">Войти</a><a class="header__buttons reg" href="#">Зарегистрироваться</a></div>
+  </section>
+</header>
+<section>
+  <div class="img">
+    <div class="main">
+      <div class="main__reserve">
+        <div class="main__reserve__text">Найдем номера под ваши пожелания</div>
+        <div class="main__reserve__date">
+          <div class="block">
+            <p class="names">Прибытие</p>
+            <input class="date" type="text" size="10" placeholder="ДД.ММ.ГГГГ">
+          </div>
+          <div class="block">
+            <p class="names">Выезд</p>
+            <input class="date" type="text" size="10" placeholder="ДД.ММ.ГГГГ">
+          </div>
+        </div>
+        <div class="main__reserve__guest">
+          <p class="names">Гости</p>
+          <input class="guest" type="text" size="35" placeholder="Сколько гостей">
+        </div><a class="main__reserve__button" href="#">Подобрать номер</a>
+      </div>
+      <div class="text">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
+    </div>
+  </div>
+</section>
+<section class="info">
+  <div class="info__main">
+    <div class="info__main__logo"><img src="/img/icons/Logo.png" alt="TOXIN">
+      <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+    </div>
+    <div class="info__main__nav">
+      <p class="names">Навигация</p>
+      <ul>
+        <li><a>О нас</a></li>
+        <li><a>Новости</a></li>
+        <li><a>Служба поддержки</a></li>
+        <li><a>Услуги</a></li>
+      </ul>
+    </div>
+    <div class="info__main__about">
+      <p class="names">О нас</p>
+      <ul>
+        <li><a>О сервисе</a></li>
+        <li><a>Наша команда</a></li>
+        <li><a>Вакансии</a></li>
+        <li><a>Инвесторы</a></li>
+      </ul>
+    </div>
+    <div class="info__main__help">
+      <p class="names">Служба поддержки</p>
+      <ul>
+        <li><a>Соглашения</a></li>
+        <li><a>Сообщества</a></li>
+        <li><a>Связь с нами</a></li>
+      </ul>
+    </div>
+    <div class="info__main__descript">
+      <p class="names">Подписка</p><span>Получайте специальные предложения и новости сервиса</span>
+      <input class="email" type="text" size="35" placeholder="Email">
+    </div>
+  </div>
+</section>
+<footer>
+  <section class="footer"><a href="">Copyright © 2018 Toxin отель. Все права зачищены.</a>
+    <div class="footer__icons"><img src="/img/icons/twitter.png" alt="twitter"><img src="/img/icons/facebook.png" alt="facebook"><img src="/img/icons/instagram.png" alt="instagram"></div>
+  </section>
+</footer>
   <script type="text/javascript" src="bundle.js"></script></body>
 </html>

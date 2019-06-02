@@ -1,15 +1,12 @@
-@import 'header.scss';
-@import 'footer.scss';
+@import 'modules/header.scss';
+@import 'modules/footer.scss';
+@import 'utils/libs';
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
 
-.image {
-  height: 800px;
-  width: 800px;
-  border: solid gray 1px;
-  background-image: url(/img/Background/image3.png);
-}
+
+
+// Modules
+@import "modules/wrapper.scss";
