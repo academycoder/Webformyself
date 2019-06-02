@@ -23,8 +23,12 @@ module.exports = {
   },
   plugins:[ 
     new HTMLPLugin({ // Плагин, позволяет компилировать файлы HTML с автоматическим добавлением ссылок на js файлы или css
-      // filename: 'index.pug', // Название файла, которое мы получим на выходе в папку dist
+      filename: 'index.html', // Название файла, которое мы получим на выходе в папку dist
       template: './src/pug/index.pug' //Указываем шаблон, который берем за основу
+    }),
+    new HTMLPLugin({ // Плагин, позволяет компилировать файлы HTML с автоматическим добавлением ссылок на js файлы или css
+      filename: 'main.html', // Название файла, которое мы получим на выходе в папку dist
+      template: './src/pug/main.pug' //Указываем шаблон, который берем за основу
     }),
     new MiniCssExtractPlugin({ // Берет мой CSS файл и компилирует его в отдельный файл style css
       filename: 'style.css'
