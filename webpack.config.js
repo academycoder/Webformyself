@@ -49,7 +49,7 @@ module.exports = {
         test: /\.(png|jpg|jpeg|svg|gif)$/, // Указываем расширение файла, на который будет влиять loader
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
+          name: 'images/[name].[ext]',
         }
       },
       {
