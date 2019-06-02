@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // Для сжатия CSS стилей
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin'); // Копирование файлов
+const CleanWebpackPlugin = require('clean-webpack-plugin'); // Очистка папки назначения(dist) перед пересборкой
 
 
 module.exports = {
@@ -23,6 +24,7 @@ module.exports = {
     port: 4200
   },
   plugins: [
+    new CleanWebpackPlugin('dist', {exclude: ['.git']}),
     new HTMLPLugin({ // Плагин, позволяет компилировать файлы HTML с автоматическим добавлением ссылок на js файлы или css
       filename: 'index.html', // Название файла, которое мы получим на выходе в папку dist
       template: './src/pug/index.pug' //Указываем шаблон, который берем за основу
@@ -38,7 +40,7 @@ module.exports = {
         from: 'src/img',
         to: 'img'
       } // Создал копирование из папки src/img в папку дист
-    ])
+    ]),
   ],
   module: {
     rules: [{
